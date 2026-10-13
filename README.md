@@ -1,82 +1,51 @@
-# Workshop 01
+# MoreBit
 
-Video archive for engineering courses and technical discussions, with the files and resources for each video.
+Video archive: courses, general topics, tools and tips in mechatronics, with the files for each video.
 
-Plain HTML, CSS and JavaScript. No build step, no framework, no dependencies.
+Plain HTML, CSS and JavaScript. No build step, no dependencies.
 
 ## Files
 
 ```
-index.html        Page skeleton (header, footer)
-content.js        All the content: links, videos, resources  ← edit this one
+index.html        Header and footer
+content.js        Links and videos  ← the only file you edit
 assets/style.css  Design
-assets/app.js     Pages, filters and navigation
-favicon.svg       Logo icon
-.nojekyll         Tells GitHub Pages to serve the files as they are
+assets/app.js     Content and Resources pages
+favicon.svg       Tab icon
+.nojekyll         Lets GitHub Pages serve the files as they are
 ```
 
 ## Deploy on GitHub Pages
 
-1. Create a new repository on GitHub, for example `workshop01`.
-2. Upload every file from this folder to the root of the repository, including `.nojekyll` and the `assets` folder.
-   - On the website: **Add file → Upload files**, drag the files in, then **Commit changes**.
-   - Or with git:
-     ```
-     git init
-     git add .
-     git commit -m "Workshop 01 website"
-     git branch -M main
-     git remote add origin https://github.com/YOUR-USERNAME/workshop01.git
-     git push -u origin main
-     ```
-3. In the repository, open **Settings → Pages**.
-4. Under **Build and deployment**, set **Source** to **Deploy from a branch**, choose **main** and **/ (root)**, then **Save**.
-5. After a minute or two the site is live at `https://YOUR-USERNAME.github.io/workshop01/`.
+1. Create a repository, for example `morebit`.
+2. Upload every file in this folder to the root of the repository, including `.nojekyll` and the `assets` folder.
+3. Open **Settings → Pages**, set **Source** to **Deploy from a branch**, choose **main** and **/ (root)**, then **Save**.
+4. After a minute or two the site is live at `https://YOUR-USERNAME.github.io/morebit/`.
 
-To use your own domain, add it under **Settings → Pages → Custom domain**.
+For your own domain, add it under **Settings → Pages → Custom domain**.
 
 ## Before publishing
 
-Open `content.js` and replace the placeholder links:
-
-- `youtube`: your channel URL
-- `platforms`: your GitHub, LinkedIn, Google Drive, Printables and GrabCAD links
-- each video's `youtubeId` (the part after `watch?v=` in the YouTube URL)
-- each resource `href`
-
-Also review the draft Terms of Use and Privacy Policy texts at the bottom of `assets/app.js` (`PAGES`).
+In `content.js`, set your YouTube channel and GitHub links in `LINKS`, and each video's `youtubeId`. Videos with a `youtubeId` show their real YouTube thumbnail.
 
 ## Add a video
 
-Copy one entry in the `VIDEOS` list in `content.js` and change the values:
+Add an entry at the top of `VIDEOS` in `content.js`:
 
 ```js
 {
-  slug: "my-new-video",           // used in the page address
-  kind: "course",                 // "course" or "disc"
+  slug: "my-new-video",            // used in the Resources link: #r-my-new-video
+  kind: "course",                  // "course" = Courses, "topic" = General Topics, "tips" = Tools & Tips
   title: "My New Video",
-  description: "One or two sentences about the video.",
-  date: "2026-11-01",             // YYYY-MM-DD, newest appears first
-  duration: "18:30",
+  date: "2026-11-01",              // YYYY-MM-DD, newest first
+  duration: "12:30",
   youtubeId: "dQw4w9WgXcQ",
-  level: "Beginner",              // optional
-  tools: ["Arduino", "Multimeter"],  // optional
-  points: ["First objective", "Second objective"],  // optional
-  notes: ["A paragraph of notes."],                 // optional
-  code:      [{ label: "user/repo",   href: "https://github.com/...", note: "What it contains" }],
-  documents: [{ label: "Notes.pdf",   href: "https://drive.google.com/...", note: "PDF, 6 pages" }],
-  files:     [{ label: "model.step",  href: "https://...", note: "CAD model" }],
-  links:     [{ label: "Datasheet",   href: "https://...", note: "Manufacturer" }]
+  thumbnail: "assets/thumbs/my-new-video.png",   // optional; otherwise the YouTube thumbnail
+  resources: [                     // optional
+    { label: "morebit/my-repo", href: "https://github.com/morebit/my-repo", note: "Source code" },
+    { label: "notes.pdf",       href: "https://github.com/morebit/my-repo", note: "6 pages" }
+  ]
 }
 ```
 
-Every field marked optional, and every resource list, can be left out. Empty sections are not shown.
-
-To rename the two kinds of video (for example "Discussion" to "Lab Notes"), change the labels in `KINDS` in `content.js`.
-
-## Page addresses
-
-- Home: `/`
-- Video page: `/#videos-my-new-video`
-- Resources: `/#resources`
-- About, Terms, Privacy: `/#about`, `/#terms`, `/#privacy`
+A file name ending in `.pdf`, `.step`, `.stl`, `.slx`… shows its type automatically. Videos without `resources` only appear on the Content page.
