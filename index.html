@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Workshop 01</title>
+<meta name="description" content="Workshop 01: engineering courses and technical discussions, with the files and resources for each video.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<meta name="theme-color" content="#FBFBF9">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#home" aria-label="Workshop 01, home">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="7" y="7" width="18" height="18" stroke="currentColor" stroke-width="1.5"/>
+        <rect x="7" y="7" width="18" height="18" stroke="currentColor" stroke-width="1.5" transform="rotate(45 16 16)"/>
+        <circle cx="16" cy="16" r="3.2" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span class="wm">Workshop <span>01</span></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#home" data-nav="home">Videos</a>
+      <a href="#resources" data-nav="resources">Resources</a>
+      <a href="#about" data-nav="about">About</a>
+    </nav>
+    <div class="ext" id="ext"></div>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><path d="M0 1h16M0 6h16M0 11h16" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="logo" href="#home" aria-label="Workshop 01, home">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="7" y="7" width="18" height="18" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="7" y="7" width="18" height="18" stroke="currentColor" stroke-width="1.5" transform="rotate(45 16 16)"/>
+          <circle cx="16" cy="16" r="3.2" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span class="wm">Workshop <span>01</span></span>
+      </a>
+      <p class="about">Video archive of engineering courses and technical discussions, with their files and references.</p>
+    </div>
+    <div><h3>Site</h3><ul><li><a href="#home">Videos</a></li><li><a href="#resources">Resources</a></li><li><a href="#about">About</a></li><li><a href="#terms">Terms of Use</a></li><li><a href="#privacy">Privacy Policy</a></li></ul></div>
+    <div><h3>Elsewhere</h3><ul id="foot-ext"></ul></div>
+    <p class="base meta">© <span id="yr"></span> Workshop 01</p>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
