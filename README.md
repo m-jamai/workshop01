@@ -1,18 +1,24 @@
 # MoreBit
 
-Video archive: courses, general topics, tools and tips in mechatronics, with the files for each video.
+A practical mechatronics learning lab: courses, experiments, tools and the files that go with each lesson.
 
-Plain HTML, CSS and JavaScript. No build step, no dependencies.
+## Design principles
+
+- **Learn by building:** clear video-led lessons and practical project resources.
+- **A confident lab identity:** deep workshop green, signal-lime accents, technical typography and editorial layouts.
+- **Resources that stay manageable:** search, category filters, collapsible project groups, and Comfortable / Compact density modes.
+- **Simple to maintain:** plain HTML, CSS and JavaScript. No build step, framework or dependencies.
+- **Accessible and responsive:** keyboard focus styles, semantic controls, mobile layouts and reduced-motion support.
 
 ## Files
 
 ```
 index.html        Header and footer
-content.js        Links and videos  ← the only file you edit
-assets/style.css  Design
-assets/app.js     Content and Resources pages
-favicon.svg       Tab icon
-.nojekyll         Lets GitHub Pages serve the files as they are
+content.js        Links, categories, videos and resource links — edit this file
+assets/style.css  Design system and responsive layouts
+assets/app.js     Content and Resources pages, filtering and resource controls
+favicon.svg       MoreBit mark
+.nojekyll         Lets GitHub Pages serve files as-is
 ```
 
 ## Deploy on GitHub Pages
@@ -26,26 +32,37 @@ For your own domain, add it under **Settings → Pages → Custom domain**.
 
 ## Before publishing
 
-In `content.js`, set your YouTube channel and GitHub links in `LINKS`, and each video's `youtubeId`. Videos with a `youtubeId` show their real YouTube thumbnail.
+In `content.js`, set your real YouTube channel and GitHub links in `LINKS`, and add each video's `youtubeId`. Videos with a `youtubeId` show their real YouTube thumbnail and link to the video.
 
-## Add a video
+## Add a video or project
 
-Add an entry at the top of `VIDEOS` in `content.js`:
+Add an entry near the top of `VIDEOS` in `content.js`:
 
 ```js
 {
-  slug: "my-new-video",            // used in the Resources link: #r-my-new-video
-  kind: "course",                  // "course" = Courses, "topic" = General Topics, "tips" = Tools & Tips
-  title: "My New Video",
-  date: "2026-11-01",              // YYYY-MM-DD, newest first
+  slug: "my-new-project",
+  kind: "course", // "course" | "topic" | "tips"
+  title: "My new project",
+  description: "What you will learn or build.",
+  date: "2026-11-01", // YYYY-MM-DD, newest first
   duration: "12:30",
-  youtubeId: "dQw4w9WgXcQ",
-  thumbnail: "assets/thumbs/my-new-video.png",   // optional; otherwise the YouTube thumbnail
-  resources: [                     // optional
-    { label: "morebit/my-repo", href: "https://github.com/morebit/my-repo", note: "Source code" },
-    { label: "notes.pdf",       href: "https://github.com/morebit/my-repo", note: "6 pages" }
+  youtubeId: "",
+  thumbnail: "assets/thumbs/my-new-project.png", // optional
+  resources: [
+    { label: "source-code", href: "https://github.com/example/project", note: "Project repository" },
+    { label: "bom.csv", href: "https://github.com/example/project/blob/main/bom.csv", note: "Bill of materials" }
   ]
 }
 ```
 
-A file name ending in `.pdf`, `.step`, `.stl`, `.slx`… shows its type automatically. Videos without `resources` only appear on the Content page.
+A file name ending in `.pdf`, `.step`, `.stl`, `.slx`, and similar shows its type automatically. Videos without `resources` appear on the Content page, but not in the Resources library.
+
+## Resource library controls
+
+- **Search:** match project names, resource labels and notes.
+- **Category filters:** show courses, general topics or tools and tips.
+- **Comfort / Compact:** Comfortable shows file notes and open links. Compact hides secondary detail and fits more items per row on desktop.
+- **Expand all / Collapse all:** open or close all currently filtered project groups.
+- **Per-project disclosure:** use the chevron beside a project to show or hide its files.
+
+All resource controls work locally in the browser; no account, API or build process is required.
