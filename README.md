@@ -1,11 +1,11 @@
 # MoreBit
 
-A practical mechatronics learning lab: courses, experiments, tools and the files that go with each lesson.
+An independent Moroccan skills hub focused on technology: courses, experiments, tools and the files that go with each lesson.
 
 ## Design principles
 
 - **Learn by building:** clear video-led lessons and practical project resources.
-- **A confident lab identity:** deep workshop green, signal-lime accents, technical typography and editorial layouts.
+- **A clear identity:** an eight-point Moroccan star (khatam) with a circuit node at its heart, and one color per section — Majorelle blue for Courses, terracotta for General Topics, zellige green for Tools & Tips.
 - **Resources that stay manageable:** search, category filters, collapsible project groups, and Comfortable / Compact density modes.
 - **Simple to maintain:** plain HTML, CSS and JavaScript. No build step, framework or dependencies.
 - **Accessible and responsive:** keyboard focus styles, semantic controls, mobile layouts and reduced-motion support.
@@ -17,7 +17,9 @@ index.html        Header and footer
 content.js        Links, categories, videos and resource links — edit this file
 assets/style.css  Design system and responsive layouts
 assets/app.js     Content and Resources pages, filtering and resource controls
-favicon.svg       MoreBit mark
+favicon.svg       MoreBit mark (app icon)
+assets/logo.svg   MoreBit mark (light backgrounds)
+assets/thumbs/    Video thumbnails (1280×720)
 .nojekyll         Lets GitHub Pages serve files as-is
 ```
 
@@ -56,6 +58,10 @@ Add an entry near the top of `VIDEOS` in `content.js`:
 ```
 
 A file name ending in `.pdf`, `.step`, `.stl`, `.slx`, and similar shows its type automatically. Videos without `resources` appear on the Content page, but not in the Resources library.
+
+## Thumbnails
+
+Use 1280×720 images. Keep the section color as the background (Courses `#2348A0`, General Topics `#B5522F`, Tools & Tips `#17785B`), the label and number top left, and the MoreBit mark bottom left. The two `EXAMPLE` entries in `content.js` show the General Topics and Tools & Tips styles — replace or delete them.
 
 ## Resource library controls
 

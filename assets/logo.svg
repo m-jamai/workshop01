@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- MoreBit mark: Moroccan eight-point star (khatam) with a circuit node at its heart -->
+  <path d="M10 10h28v28H10z" stroke="#202724" stroke-width="3.2" stroke-linejoin="round"/>
+  <path d="M24 4.2 43.8 24 24 43.8 4.2 24z" stroke="#202724" stroke-width="3.2" stroke-linejoin="round"/>
+  <circle cx="24" cy="24" r="6" fill="#2348A0"/>
+  <circle cx="24" cy="24" r="2.2" fill="#F2C46D"/>
+</svg>

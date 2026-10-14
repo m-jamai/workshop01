@@ -1,4 +1,4 @@
-/* MoreBit — site content. This is the only file you edit.
+/* MoreBit — Independent Moroccan Skills Hub — site content. This is the only file you edit.
 
    kind: "course" (Courses), "topic" (General Topics) or "tips" (Tools & Tips)
    youtubeId: the part after watch?v= in the YouTube URL ("" = link to the channel)
@@ -30,6 +30,28 @@ const VIDEOS = [
       { label: "README.md", href: "https://github.com/morebit/analog-electronics-101#readme", note: "Course notes: theory and the 9 experiments" },
       { label: "bom.csv", href: "https://github.com/morebit/analog-electronics-101/blob/main/bom.csv", note: "Parts list" },
       { label: "spice", href: "https://github.com/morebit/analog-electronics-101/tree/main/spice", note: "LTspice simulations for experiments 2, 3, 4, 6 and 8" }
+    ]
+  },
+
+  /* ── EXAMPLES: one per section, to show each section's color. Replace or delete. ── */
+  {
+    slug: "how-chips-read-the-world", kind: "topic",
+    title: "How Chips Read the World: Sensors, ADCs and a Little Math",
+    description: "Example entry — General Topics.",
+    date: "2026-10-10", duration: "18:40", youtubeId: "",
+    thumbnail: "assets/thumbs/how-chips-read-the-world.png",
+    resources: [
+      { label: "adc-notes.pdf", href: "https://github.com/morebit", note: "Example resource" }
+    ]
+  },
+  {
+    slug: "multimeter-basics", kind: "tips",
+    title: "Multimeter Basics: 5 Measurements You'll Use Daily",
+    description: "Example entry — Tools & Tips.",
+    date: "2026-10-06", duration: "9:15", youtubeId: "",
+    thumbnail: "assets/thumbs/multimeter-basics.png",
+    resources: [
+      { label: "multimeter-cheatsheet.pdf", href: "https://github.com/morebit", note: "Example resource" }
     ]
   }
 ];
